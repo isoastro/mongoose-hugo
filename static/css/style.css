@@ -103,6 +103,10 @@ a.skip-main:active {
     border: none;
 }
 
+a.active {
+    font-weight: bold;
+}
+
 /* Table */
 .table-wrapper {
     overflow-x: auto;
