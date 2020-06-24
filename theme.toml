@@ -1,0 +1,15 @@
+name = "Mongoose"
+license = "MIT"
+description = "A shameless fork of the Anubis theme"
+homepage = "https://github.com/isoastro/mongoose-hugo"
+tags = ["fork"]
+features = ["pagination"]
+
+[author]
+    name = "Andrew Curtis"
+    homepage = "https://github.com/isoastro"
+
+[original]
+    name = "Dmitry Kolosov"
+    homepage = "http://dmitrykolosov.ru"
+    repo = "https://github.com/chesterhow/tale"
