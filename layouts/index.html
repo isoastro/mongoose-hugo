@@ -3,7 +3,7 @@
         {{ .Content }}
     </div>
 
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $pages := where site.RegularPages "Section" "in" site.Params.mainSections }}
     {{ range (.Paginate $pages).Pages }}
         {{ partial "postSummary.html" . }}
     {{ end }}
