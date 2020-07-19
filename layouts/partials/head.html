@@ -11,13 +11,13 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | absURL }}">
-<link rel="apple-touch-icon-precomposed" href="{{ "favicon.png" | absURL }}">
+<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
+<link rel="apple-touch-icon-precomposed" href="{{ "favicon.png" | relURL }}">
 
-<link rel="stylesheet" href="{{ "css/style.css" | absURL }}?rnd={{ now.Unix }}" />
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?rnd={{ now.Unix }}" />
 
 {{ range .Site.Params.customCSS -}}
-<link rel="stylesheet" href="{{ . | absURL }}?rnd={{ now.Unix }}">
+<link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
 {{- end }}
 
 {{ template "_internal/opengraph.html" . }}

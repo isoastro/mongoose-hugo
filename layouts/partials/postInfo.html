@@ -11,14 +11,14 @@
         {{ if .Params.categories }}
             <ul class="post-categories">
                 {{ range .Params.categories }}
-                    <li><a href="{{ "categories/" | absLangURL }}{{ . }}">{{ . }}</a></li>
+                    <li><a href="{{ "categories/" | relLangURL }}{{ . }}">{{ . }}</a></li>
                 {{ end }}
             </ul>
             {{ end }}
             {{ if .Params.tags }}
                 <ul class="post-tags">
                     {{ range .Params.tags }}
-                        <li><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">#{{ . }}</a></li>
+                        <li><a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a></li>
                     {{ end }}
                 </ul>
         {{ end }}
